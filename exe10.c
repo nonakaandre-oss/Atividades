@@ -7,8 +7,10 @@ int main() {
     // Entrada dos números
     for (int cont = 0; cont < 5; cont++) {
         printf("Digite um número inteiro: ");
-        scanf("%d", &vetor[cont]);
+        scanf("%d", &vetor[cont]); /*lê o número de %d em cont e coloca 
+        dentro do vetor*/
     }
+    
     
 
    
