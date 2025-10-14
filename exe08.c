@@ -1,19 +1,24 @@
 #include <stdio.h>
+
 int main(){
+   int numero[10];  
+   int busca, contador = 0; 
 
-    int seq[6];
-    
+   for(int cont = 0;cont < 10;cont++){
 
+    printf("Digite um número inteiro[%d / 10]:", cont + 1);
+    scanf("%d", &numero[cont]);
+ }
 
-for (int i=0; i<6; i++){
+    printf("\nDigite o número que será buscado:");
+    scanf("%d", &busca);         //Guarda o número digitado no int"buscar"
 
-    printf("digite um número inteiro:\n");
-    scanf("%d", &i);
+    for(int cont = 0;cont < 10;cont++){
+        if(numero[cont] == busca){  //Se dentro do vetor houver um número igual (==) o digitado em 'busca' 
+            contador++;             // Adiciona 1 em 'contador
+        }
+    }
 
-    printf("Os números são:", [seq] );
-
-}
-
-
+    printf("\nO número %d tem %d ocorrencias no vetor.\n", busca, contador);
     return 0;
 }

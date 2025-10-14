@@ -9,6 +9,7 @@ int main() {
         printf("Digite um número inteiro: ");
         scanf("%d", &vetor[cont]);
     }
+    
 
    
             
