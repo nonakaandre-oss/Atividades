@@ -4,14 +4,16 @@ int main (){
 
     for(int i=0;i<10;i++){
 
-        printf("digite o numero %d\n", i + 1);
+        printf("digite o numero %d\n", i);
         scanf("%d", &numero[i]);
     }
     for(int i=0;i<10;i++){
   
-       if ((numero[i])% 2== 0)
-        printf("numeros digitados são %d\n", numero[i]);
+       if (numero[i] % 2 == 0)
+        printf("numeros pares são %d\n", numero[i]);
     }
 
     return 0;
 }
+
+// 
