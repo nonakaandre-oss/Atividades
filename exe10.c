@@ -5,12 +5,20 @@ int main() {
     int temp;
     
     // Entrada dos números
-    for (int cont = 0; cont < 5; cont++) {
-        printf("Digite um número inteiro: ");
-        scanf("%d", &vetor[cont]); /*lê o número de %d em cont e coloca 
+    for (int pos = 0; pos < 5; pos++) {
+        printf("Digite um número inteiro [%d / 5]:" , pos + 1);
+        scanf("%d", &vetor[pos]); /*lê o número de %d em cont e coloca 
         dentro do vetor*/
     }
-    
+
+    for(int pos = 0;pos < 4;pos++){
+        if(vetor[pos] > vetor[pos+1]){
+            int temp = vetor[pos];
+            vetor[pos] = vetor[pos+1];
+            vetor[pos+1] = temp;
+            pos = -1;
+        }
+    }    
     
 
    
@@ -20,9 +28,9 @@ int main() {
 
     // Saída formatada com vírgulas
     printf("\nVetor em ordem crescente:\n");
-    for (int cont = 0; cont < 5; cont++) {
-        printf("%d", vetor[cont]);
-        if (cont < 4)
+    for (int pos = 0; pos < 5; pos++) {
+        printf("%d", vetor[pos]);
+        if (pos < 4)
             printf(", ");
         else
             printf("\n");
